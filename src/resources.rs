@@ -9,9 +9,9 @@ pub struct SnakeBlocks(pub Vec<Entity>);
 pub struct SnakeMoveTimer(pub Timer);
 
 impl SnakeMoveTimer {
-    pub fn new() -> Self {
+    pub fn new(d: f32) -> Self {
       Self(Timer::from_seconds(
-        0.20,
+        d,
         TimerMode::Repeating,
     ))
     }
@@ -21,9 +21,9 @@ impl SnakeMoveTimer {
 pub struct FoodSpawnTimer(pub Timer);
 
 impl FoodSpawnTimer {
-    pub fn new() ->Self {
+    pub fn new(d: f32) ->Self {
       Self(Timer::from_seconds(
-        2.0,
+        d,
         TimerMode::Repeating,
     ))
     }
